@@ -1,0 +1,23 @@
+Health Deterioration Detection Model
+==================================================
+
+PURPOSE: Detect health DETERIORATION from past trends
+NOT future prediction - just pattern detection!
+
+APPROACH: 100% UNSUPERVISED
+- No manual labels
+- No future value prediction
+- Model learns normal patterns from FitBit data
+
+INPUT: Past 7 days of watch data
+OUTPUT:
+  1. Deterioration Status (Normal/Mild/Severe)
+  2. Anomaly Score
+  3. Trend Analysis (slopes)
+
+MODELS USED:
+  1. Isolation Forest (Anomaly Detection)
+  2. K-Means Clustering (Pattern Grouping)
+
+FEATURES (per variable):
+  - Mean, Std, Slope, Change Rate, Recent Value, Consistency

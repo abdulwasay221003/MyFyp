@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "265588697923",
+    "firebase_url": "https://health-sync-dev-default-rtdb.firebaseio.com",
+    "project_id": "health-sync-dev",
+    "storage_bucket": "health-sync-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265588697923:android:bbb56111f3e4e070d3ddf6",
+        "android_client_info": {
+          "package_name": "com.healthsync.connector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN_45CEcG0DpJTDklBonZPXV6VDvZMZhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

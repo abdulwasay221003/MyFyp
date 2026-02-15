@@ -1,0 +1,5 @@
+age_years
+gender_binary
+bmi
+active
+smoke

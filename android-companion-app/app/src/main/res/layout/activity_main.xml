@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Connect Sync"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="8dp" />
+
+        <!-- User Info -->
+        <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/patientIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient ID: --"
+            android:textSize="16sp"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status Text -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checking Health Connect availability..."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#E3F2FD"
+            android:textColor="#1976D2"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Request Permissions Button -->
+        <Button
+            android:id="@+id/btnRequestPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request Health Connect Permissions"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#9C27B0"
+            android:enabled="false" />
+
+        <!-- Start Background Sync Button -->
+        <Button
+            android:id="@+id/btnStartSync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Background Sync"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:enabled="false"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Sync Now Button -->
+        <Button
+            android:id="@+id/btnSyncNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sync Now"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:enabled="false"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Check Sync Status Button -->
+        <Button
+            android:id="@+id/btnCheckSyncStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Sync Status"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:backgroundTint="#2196F3"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:backgroundTint="#F44336"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Info Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This app syncs your Health Connect data to Firebase every 15 minutes.\n\nYou can close this app - it will continue syncing in the background."
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+</ScrollView>

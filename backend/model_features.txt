@@ -1,0 +1,17 @@
+Health Pattern Learning Model
+==================================================
+
+UNSUPERVISED LEARNING - No Manual Labels!
+Model learns patterns from data itself.
+
+Features (order matters):
+  1. AvgHeartRate
+  2. TotalSteps
+  3. Calories
+  4. TotalDistance
+  5. SleepHours
+  6. ActiveMinutes
+
+Cluster Mapping:
+  Cluster 1: Healthy Pattern
+  Cluster 0: High Risk Pattern

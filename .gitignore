@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+backend/__pycache__/
+backend/env/
+backend/venv/
+android-companion-app/build/
+android-companion-app/.gradle/
+android-companion-app/local.properties
+
+# Build outputs
+dist/
+build/
+*.apk
+*.aab
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+
+# Dataset (too large for git)
+backend/new dataset/
+
+# Temporary files
+*.tmp
+backend/firebase_key.json

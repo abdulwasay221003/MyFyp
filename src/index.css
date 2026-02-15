@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    /* Medical Blue Primary */
+    --primary: 210 76% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 76% 70%;
+
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 210 20% 20%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 210 15% 50%;
+
+    --accent: 210 100% 95%;
+    --accent-foreground: 210 76% 60%;
+
+    /* Health Status Colors */
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 122 39% 95%;
+
+    --warning: 45 100% 51%;
+    --warning-foreground: 210 20% 15%;
+    --warning-light: 45 100% 95%;
+
+    --danger: 4 90% 58%;
+    --danger-foreground: 0 0% 100%;
+    --danger-light: 4 90% 95%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 76% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 76% 60%), hsl(210 76% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(122 39% 49%), hsl(122 39% 60%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 30% 99%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 20% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 20% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(210 20% 15% / 0.1);
+    --shadow-glow: 0 0 20px hsl(210 76% 60% / 0.3);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 20% 20%;
+    --sidebar-primary: 210 76% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 96%;
+    --sidebar-accent-foreground: 210 76% 60%;
+    --sidebar-border: 210 20% 92%;
+    --sidebar-ring: 210 76% 60%;
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 25% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 210 76% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 76% 70%;
+
+    --secondary: 210 25% 16%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 210 25% 16%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 210 25% 18%;
+    --accent-foreground: 210 76% 60%;
+
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 122 39% 15%;
+
+    --warning: 45 100% 51%;
+    --warning-foreground: 210 30% 8%;
+    --warning-light: 45 100% 15%;
+
+    --danger: 4 90% 58%;
+    --danger-foreground: 0 0% 100%;
+    --danger-light: 4 90% 15%;
+
+    --destructive: 4 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 20%;
+    --input: 210 25% 20%;
+    --ring: 210 76% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210 76% 50%), hsl(210 76% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(122 39% 40%), hsl(122 39% 49%));
+    --gradient-card: linear-gradient(180deg, hsl(210 25% 12%), hsl(210 25% 10%));
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 20px hsl(210 76% 60% / 0.4);
+
+    --sidebar-background: 210 25% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 210 76% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 16%;
+    --sidebar-accent-foreground: 210 76% 60%;
+    --sidebar-border: 210 25% 18%;
+    --sidebar-ring: 210 76% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .shadow-custom-sm {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .shadow-custom-md {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    10%, 30% {
+      transform: scale(1.1);
+    }
+    20%, 40% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+}
