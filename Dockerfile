@@ -16,7 +16,10 @@ COPY . .
 # Remove backend folder from frontend image (it has its own)
 RUN rm -rf backend android-companion-app
 
-# Build for production
+# Verify postcss config exists
+RUN ls -la postcss.config.js tailwind.config.ts
+
+# Build for production (no cache)
 RUN npm run build
 
 # Production stage with nginx
