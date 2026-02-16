@@ -118,6 +118,40 @@ def load_ml_models():
 load_ml_models()
 
 # -----------------------------------------------------------------------------
+# Debug Endpoint - Check ML Model Status
+# -----------------------------------------------------------------------------
+@app.route("/debug/model_status", methods=["GET"])
+def model_status():
+    """Debug endpoint to check if ML models are loaded"""
+    import os
+    return jsonify({
+        "models_loaded": {
+            "health_cluster_model": health_cluster_model is not None,
+            "health_scaler": health_scaler is not None,
+            "anomaly_model": anomaly_model is not None,
+            "cluster_names": cluster_names is not None,
+            "trend_detector": trend_detector is not None,
+            "trend_detector_scaler": trend_detector_scaler is not None,
+            "trend_cluster_model": trend_cluster_model is not None,
+            "trend_cluster_scaler": trend_cluster_scaler is not None,
+            "trend_cluster_names": trend_cluster_names is not None,
+        },
+        "files_exist": {
+            "health_cluster_model.pkl": os.path.exists('health_cluster_model.pkl'),
+            "health_scaler.pkl": os.path.exists('health_scaler.pkl'),
+            "anomaly_model.pkl": os.path.exists('anomaly_model.pkl'),
+            "cluster_names.pkl": os.path.exists('cluster_names.pkl'),
+            "trend_detector.pkl": os.path.exists('trend_detector.pkl'),
+            "trend_detector_scaler.pkl": os.path.exists('trend_detector_scaler.pkl'),
+            "trend_cluster_model.pkl": os.path.exists('trend_cluster_model.pkl'),
+            "trend_cluster_scaler.pkl": os.path.exists('trend_cluster_scaler.pkl'),
+            "trend_cluster_names.pkl": os.path.exists('trend_cluster_names.pkl'),
+        },
+        "working_directory": os.getcwd(),
+        "files_in_dir": [f for f in os.listdir('.') if f.endswith('.pkl')]
+    })
+
+# -----------------------------------------------------------------------------
 # Helper function to resolve patient ID (simple or firebase UID)
 # -----------------------------------------------------------------------------
 def resolve_patient_id(patient_id_input):
